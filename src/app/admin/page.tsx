@@ -30,7 +30,7 @@ export default function AdminPage() {
     };
 
     getShareToken();
-  }, []);
+  }, [showToast]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f9fafb] dark:bg-[#18181b]">

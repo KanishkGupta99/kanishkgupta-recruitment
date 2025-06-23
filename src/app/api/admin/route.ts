@@ -4,9 +4,9 @@ import axios from 'axios';
 
 export async function GET(request:NextRequest) {
     try {
-        let cookieStore = await cookies();
+        const cookieStore = await cookies();
         let accessToken = cookieStore.get('accessToken')?.value;
-        let refreshToken = cookieStore.get('refreshToken')?.value;
+        const refreshToken = cookieStore.get('refreshToken')?.value;
         if (!accessToken) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }

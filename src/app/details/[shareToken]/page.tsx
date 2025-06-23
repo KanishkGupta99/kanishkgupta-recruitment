@@ -79,7 +79,7 @@ export default function ShareDataPage() {
               <tr key={index} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900">
                 {Object.values(item).map((val, i) => (
                   <td key={i} className="px-3 py-2">
-                    {typeof val === 'object' ? JSON.stringify(val) : val}
+                    {typeof val === 'object' && val !== null ? JSON.stringify(val) : val?.toString() ?? ''}
                   </td>
                 ))}
               </tr>
