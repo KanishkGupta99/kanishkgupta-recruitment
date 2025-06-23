@@ -19,7 +19,7 @@ export default function AdminPage() {
         const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
         const shareLink = `${baseUrl}/details/${encodedToken}`;
         setPublicUrl(shareLink);
-      } catch (err: any) {
+      } catch (err:any) {
         const msg = err.response?.data?.error || 'Failed to get share token';
         setError(msg);
         if (msg.toLowerCase().includes('session expired')) {
